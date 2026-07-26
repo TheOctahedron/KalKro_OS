@@ -1,30 +1,29 @@
 from KalKro.utilities.market_helper_pack.routes.wallet_check import wallet_check
 from KalKro.utilities.market_helper_pack.routes.rating_check import rating_check
-from KalKro.modules.games.marketing_simulator.simulator.main_office import Welcome_Market
+
 import time
 
 
-market_helper = {
+market_data_pack = {
+    "market_money": 1000,
+
+    "level": 0,
+   
     "coin": {
-        "Milcoin": 2300,
-        "Excoin": 3000000,
-        "Nocoin": 300,
-        "TRIXcoin": 3190,
-        "Coconcoin": 30303,
-        "Laxcoin": 50
+        "MilCoin": 2300,
+        "ExCoin": 3000000,
+        "NoCoin": 300,
+        "TRIXCoin": 3190,
+        "CoconCoin": 30303,
+        "LaxCoin": 50
     },
+
     
     "inflation_percent": 0,
     "visits": 0,
     
-    "money": 1000,
-    "add": 0,
-    "profit": 0,
-    "starting_price": 0,
-    "level": 0,
     
-    
-    "all_cycles": { #####################
+    "full_cycles": { #####################
         "shop_segment": {"products": {
             "Snacks": 200,
             "Drinks": 300,
@@ -89,8 +88,9 @@ market_helper = {
 }
 
 def market_actions(cmd):
-    my_level = market_helper["level"]
-    my_specilization = market_helper["specialization"]
+    from KalKro.modules.games.marketing_simulator.simulator.welcome_office import Welcome_Market
+    my_level = market_data_pack["level"]
+    my_specilization = market_data_pack["specialization"]
     cmd = cmd.lower().strip()
     main_actions = {
         "!wallet": {"run": lambda: wallet_check(cmd), "description": "shows the current wallet account"},
