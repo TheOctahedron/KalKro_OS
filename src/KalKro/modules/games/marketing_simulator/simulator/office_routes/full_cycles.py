@@ -1,5 +1,6 @@
 from KalKro.modules.games.marketing_simulator.simulator.office_routes.make_deal import Deal_Maker
 from KalKro.modules.games.marketing_simulator.simulator.main_office import Marketing_Simulator
+from KalKro.utilities.game_databases.market_data_pack.market_data import market_actions
 from KalKro.utilities.helpers import printsl
 import time
 
@@ -35,7 +36,7 @@ class Full_Cycles():
           time.sleep(1)
           return
         case _:
-          self.market_actions(question)
+          market_actions(question)
           continue
       self.product_price()
 
@@ -79,7 +80,7 @@ class Full_Cycles():
           time.sleep(1)
           return
         case _:
-          self.market_actions(question)
+          market_actions(question)
           continue
 
       self.marketd.starting_price = s_price

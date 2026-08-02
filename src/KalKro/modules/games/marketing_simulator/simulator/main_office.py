@@ -64,7 +64,7 @@ class Marketing_Simulator:
           time.sleep(1)
           return
         case _:
-          self.market_actions(question)
+          market_actions(question)
           continue
 
 

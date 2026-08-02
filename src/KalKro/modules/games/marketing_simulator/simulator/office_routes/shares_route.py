@@ -1,4 +1,5 @@
 from KalKro.utilities.helpers import printsl, loading_effect, yes_no
+from KalKro.utilities.game_databases.market_data_pack.market_data import market_actions
 import time, random
 
 class Share_market:
@@ -36,7 +37,7 @@ class Share_market:
           case "!help":
             self.get_share_help() 
           case _:
-            self.etc_actions(question)
+            market_actions(question)
             continue
         self.found_shares(selected_section, share_category)
         
@@ -194,7 +195,7 @@ class Share_market:
               self.sell_share(total_price)
               return
             case _:
-              self.etc_actions(question)
+              market_actions(question)
         
         chance = random.randint(1, 50)
         match category:

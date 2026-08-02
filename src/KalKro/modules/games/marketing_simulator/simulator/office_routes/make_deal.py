@@ -1,5 +1,6 @@
 import time, random
 from KalKro.utilities.helpers import printsl, loading_effect
+from KalKro.utilities.game_databases.market_data_pack.market_data import market_actions
 
 class Deal_Maker():
   def __init__(self, marketdata):
@@ -41,7 +42,7 @@ class Deal_Maker():
         case "2":
           return
         case _:
-          self.market_actions(question)
+          market_actions(question)
           continue
           
     self.check_deal()
