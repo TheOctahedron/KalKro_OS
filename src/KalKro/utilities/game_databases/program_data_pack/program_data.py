@@ -31,7 +31,7 @@ from KalKro.modules.apps.octice_office.octice import OcticeSelect
 
 
 
-program_data_pack = {
+program_data = {
   "downloadable_programs": [
     {"id": 1, "name": "Rock-Paper-Scissors", "weight": 120},  # added to prg_link
     {"id": 2, "name": "Marketing-Simulator", "weight": 1000},  # added to prg_link
